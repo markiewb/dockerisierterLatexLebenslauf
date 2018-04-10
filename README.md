@@ -5,8 +5,8 @@ Dockerisierte Latex-Bewerbungsvorlage inkl. Anschreiben
 Nutzung
 -----
 
-1. Bearbeiten und Befuellen von `anschreiben.tex` und `lebenslauf.tex` (in `src/main/resources`) mittels beliebigen Texteditor/IDE.
-2. Generierung durch Ausfuehrung `lebenslauf.sh`/`anschreiben.sh`. 
+1. Bearbeiten und Befuellen von `anschreiben.tex` und `lebenslauf.tex` (in `src/main/resources`) mittels beliebigem Texteditor oder IDE.
+2. Generierung der PDF durch Ausfuehrung von `lebenslauf.sh`/`anschreiben.sh`. 
 
 Beispiele
 -------
