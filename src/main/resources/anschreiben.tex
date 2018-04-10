@@ -1,0 +1,150 @@
+\documentclass[ngerman,10pt]{g-brief}
+
+%deutsche Silbentrennung
+%\usepackage[ngerman]{babel}
+%deutsche Anfuhrungszeichen - https://de.wikibooks.org/wiki/LaTeX-Wörterbuch:_Anführungszeichen
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+%\usepackage{titlesec}					%custom \section
+
+\usepackage{array}
+\usepackage{framed}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\LyxGruss}[1]{\Gruss{#1}{0.5cm}}
+\newcommand{\quoting}[1]{{\glqq #1\grqq}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\lochermarke
+\faltmarken
+%\fenstermarken
+\trennlinien
+
+\makeatother
+\begin{document}
+
+    \Name{Maik Mustermann}
+
+
+    \Unterschrift{Maik Mustermann}
+
+
+    \Strasse{Muellergasse 98}
+
+
+    \Zusatz{}
+
+
+    \Ort{56317 Muellerdorf}
+
+
+    \Land{}
+
+
+    \RetourAdresse{}
+
+
+    \Telefon{0176 / 12 34 56 78}
+
+
+    \Telefax{}
+
+
+    \Telex{}
+
+
+    \EMail{maik.mustermann@emailprovider.de}
+
+
+    \HTTP{}
+
+
+    \Bank{}
+
+
+
+    \BLZ{}
+    \Adresse{
+    Firmenname AG\\
+    Z.Hd. Frau Schuster\\
+    Poststr. 99\\
+    \\
+    12345 Darmstadt
+    }
+
+    \Betreff{Bewerbung als \enquote{Software Engineer} (Ref.-Nr. V1234567)}
+
+
+    \Postvermerk{}
+
+
+    \MeinZeichen{}
+
+
+    \IhrZeichen{}
+
+
+    \IhrSchreiben{}
+
+
+    %\Anlagen{Lebenslauf, Referenzen}
+
+
+    \Verteiler{}
+
+
+    \Datum{9. Dezember 2017}
+
+
+    \Anrede{Sehr geehrte Frau Schuster,}
+
+
+    \LyxGruss{Mit freundlichen Grüßen}
+
+    \begin{g-brief}
+        \enlargethispage{2\baselineskip}
+
+        ich möchte mich auf die Stelle des \enquote{Software Engineer} bewerben. Ich bin seit über xx Jahren in der Softwareentwicklung tätig....
+
+        
+        Ich möchte gerne ....
+
+
+        Durch meine  ....
+
+
+        Ich freue mich von Ihnen zu hören und stehe gerne jederzeit für Nachfragen zur Verfügung.
+
+    \end{g-brief}
+
+\end{document}

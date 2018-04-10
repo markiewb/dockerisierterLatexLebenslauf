@@ -1,0 +1,199 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[bottom=2cm]{geometry}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					    %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				    %better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				    %for Grades
+\usepackage{titlesec}					    %custom \section
+
+\usepackage{array}
+\usepackage{framed}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+%deutsche Anfuhrungszeichen - https://de.wikibooks.org/wiki/LaTeX-Wörterbuch:_Anführungszeichen
+\usepackage[autostyle=true,german=quotes]{csquotes}
+
+%CV Sections inspired by: 
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+ %https://de.wikibooks.org/wiki/LaTeX-Wörterbuch:_tabular
+ %Zur Ausrichtung von p-Spalten in tabular-Umgebungen
+ \newcommand{\ltab}{\raggedright\arraybackslash} % Tabellenabschnitt linksbündig
+ \newcommand{\ctab}{\centering\arraybackslash} % Tabellenabschnitt zentriert
+ \newcommand{\rtab}{\raggedleft\arraybackslash} % Tabellenabschnitt rechtsbündig
+ \newcolumntype{R}[1]{>{\rtab}m{#1}}
+ \renewcommand{\footnotesize}{\fontsize{10pt}{11pt}\selectfont}
+ 
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+ \section{\huge Bewerbung Software Engineer}
+
+ 
+
+ % -------------------------------------------------
+ % Passfoto
+ % -------------------------------------------------
+
+\vskip 8em
+\begin{center}
+ %\fbox{\includegraphics[width=5cm]{Bewerbungsfoto.png}}
+ \includegraphics[width=6.5cm]{Bewerbungsfoto-sw.png}
+\end{center}
+
+
+ \vskip 3em
+
+\par{\centering {\huge Maik \textsc{Mustermann} }\bigskip\par}
+
+ \vskip 6em
+
+ \section{}
+
+\vskip 2em
+
+ \begin{tabular}{R{3.3cm}l}
+  \textsc{Adresse:}          & Dorfstr. 14, 09234 Musterstadt \\
+  \textsc{Kontaktdaten:}     & \Telefon~0176 / 12 32 43 44\\
+  \textsc{}                  & \Letter~\href{mailto:maik.mustermann@emailprovider.de}{maik.mustermann@emailprovider.de}\\
+
+  \\
+  \textsc{Anlagen:}         & Lebenslauf, Referenzen \\
+ \end{tabular}
+ \section{}
+
+
+ \newpage
+ 
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{\huge Lebenslauf}
+
+%Section: Work Experience at the top
+\section{Berufserfahrung}
+\begin{tabular}{R{1.5cm}|p{12.0cm}}
+ \emph{Aktuell} & \textsc{Java-Entwickler} (Senior) bei \textsc{Blablabla GmbH}, Bielefeld \\\textsc{Apr 2066}&
+ \\&
+ \footnotesize{
+
+ Weiterentwicklung des Produktes \enquote{XXX Platform} (\href{https://www.xxx-platform.com}{Link}), einem System fuer blablaba..
+ 😀
+ \vskip 1em
+ Die Hauptaufgabe ist die Umsetzung von ... in einem ... Team.
+ \vskip 1em
+ Weitere Aufgaben, ...
+ \vskip 1em
+
+ (Spring-Hibernate-Tomcat-Stack; Messaging: xxxx, Webservices; UI: xxx, yyy, zzz; Testing: JUnit, xxx, xxx)
+}\\\multicolumn{2}{c}{} \\
+
+ 
+ \textsc{Nov 2055} & \textsc{Build-Ingenieur} bei \textsc{Joes Bude GmbH}, Duesseldorf\\&\emph{ }\\&\footnotesize{Migration der Build-Pipeline und ...
+ }\\\multicolumn{2}{c}{} \\
+ 
+ \textsc{Nov 2044} & \textsc{Java-Entwickler} bei \textsc{PizzaDienst AG}, Koeln \\&\emph{ }\\&\footnotesize{
+
+ Neuentwicklung von \enquote{Pizza-Platform} ..., einem Werkzeug zur .... \vskip 1em
+ Als projektverantwortlicher Entwickler waren, ... weitere Aufgaben.
+ \vskip 1em
+
+
+ (Spring-Hibernate-Tomcat-Stack; Messaging: xxxx, Webservices; UI: xxx, yyy, zzz; Testing: JUnit, xxx, xxx)
+ }\\\multicolumn{2}{c}{} \\
+ 
+
+\end{tabular}
+
+\section{Praktika und Nebentätigkeiten}
+\begin{tabular}{R{1.5cm}|p{12.0cm}}
+
+ \textsc{2022-2022} &  \textsc{Diplomand} bei \textsc{XXX Systemhaus GmbH}, Koeln\\&\emph{ }\\&\footnotesize{Masterarbeit sowie Prototypentwicklung zur 
+ \vskip 1 em
+ (Java SE, ..., ...)}\\\multicolumn{2}{c}{} \\
+
+ \textsc{2011-2011} & \textsc{YYY-Entwickler} bei \textsc{YYY Center GmbH}, Bonn\\&\emph{ }\\&\footnotesize{
+ Nebentätigkeit und Praktikumssemester: Weiterentwicklung des Produktes \enquote{\mbox{SuperTool 2000}} (\href{http://www.supertool2000.com}{Link}), einem ... zur ... für ....  
+  \vskip 1 em
+  (C\#, .., .. )
+ }\\\multicolumn{2}{c}{} \\
+
+ \textsc{2000-2000} & \textsc{YYY-Entwickler} bei \textsc{ZZZ GmbH}, Darmstadt \\&\emph{ }\\&\footnotesize{Nebentätigkeit: Aufbau der Plattform \url{http://www.meine-platform.com} zur ....
+ \vskip 1 em
+ (...-Stack, JS, .., ..)
+ }\\\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+
+%Section: Education
+
+\section{Akademische Laufbahn}
+\begin{tabular}{R{1.5cm}|p{12.0cm}}
+
+ \textsc{2088} &  XXX XXX-Konferenz 2088\\&\emph{ }\\&\footnotesize{Artikel: \enquote{Blabla fuer Blabla unter dem Kontext von Blabla im Blabla}}\\\multicolumn{2}{c}{} \\
+
+ \textsc{2077} & \textsc{Informatik Master} (\enquote{mit Auszeichnung}), \textsc{Hochschule Musterstadt}\\&\emph{ }\\&\footnotesize{
+ Masterarbeit: \enquote{Optimierung von Blabla fuer Blabla in Blabla unter Beachtung von Blabla-IT-Kram}\vskip 0.5 em (Partner \textsc{XXX Systemhaus GmbH})
+ }\\\multicolumn{2}{c}{} \\
+
+ \textsc{2066} & \textsc{Informatik Bachelor} (\enquote{mit Auszeichnung}), \textsc{Hochschule Musterstadt}\\&\emph{ }\\&\footnotesize{Bachelorarbeit: \enquote{Praktischer Einsatz von Blamuster- Ansätze zur Lösung von Bla-Problemen im Blabla-Kontext}\vskip 0.5 em (Partner \textsc{YYY Computer GmbH})
+ }\\\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+
+%Section: Languages
+\section{Fremdsprachen}
+\begin{tabular}{rl}
+\textsc{English:}&Flüssig Niveau XX\\
+\textsc{Russisch:}&Niveau XX\\
+\end{tabular}
+
+\section{Interessen und Aktivitäten}
+ Zur Weiterbildung ... engagiere ich mich in der Weiterentwicklung von Open-Source-Software (\href{https://github.com/meinprofil}{Github-Profil}), seit 20xx besonders für XXXX.
+ So bin ich xxxx und ich \href{https://meinblog.wordpress.com}{blogge} darüber.
+ Durch ....
+ So habe ich mehr Zeit für meine anderen Interessen wie ... und der Suche nach ...
+
+ 
+\end{document}
