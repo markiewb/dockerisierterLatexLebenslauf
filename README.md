@@ -11,8 +11,8 @@ Nutzung
 Beispiele
 -------
 
-* [Anschreiben-Beispiel](anschreiben.pdf)
-* [Lebenslauf-Beispiel](lebenslauf.pdf)
+* [Anschreiben-Beispiel](src/main/resources/beispiele/anschreiben.pdf)
+* [Lebenslauf-Beispiel](src/main/resources/beispiele/lebenslauf.pdf)
 
 Technische Umsetzung
 -------
