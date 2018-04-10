@@ -16,8 +16,8 @@ Beispiele
 
 Technische Umsetzung
 -------
-Die Skripte starten einen Docker-Container [blang/latex](https://registry.hub.docker.com/u/blang/latex) mit einer Latex-Installation, mounten das aktuelle Verzeichnis mit den Quelldateien und fuehren den endsprechende Latex-Befehl aus. Das Resultat liegt dann neben den Quelldateien als PDF vor.  
+Die Skripte starten einen Docker-Container [blang/latex](https://registry.hub.docker.com/u/blang/latex) mit einer Latex-Installation, mounten das aktuelle Verzeichnis mit den tex-Quelldateien und fuehren den entsprechenden Latex-Befehl aus. Das Resultat liegt dann neben den Quelldateien als PDF vor.  
 
-Mehr Details zu dem Projekt auf dem ich hier aufsetze, findet man unter [https://www.blang.io/posts/2015-04_docker-tooling-latex/](https://www.blang.io/posts/2015-04_docker-tooling-latex/)
+Mehr Details zum Projekt auf dem ich hier aufsetze, findet man unter [https://www.blang.io/posts/2015-04_docker-tooling-latex/](https://www.blang.io/posts/2015-04_docker-tooling-latex/)
 
 FYI Damit das Projekt einfacher in Java-IDEs geladen werden kann, besitzt das Projekt eine pom.xml.
